@@ -1,0 +1,98 @@
+$bc : "background-color";
+
+@mixin Flex($direction , $wrap , $alignItem , $justifyContent)
+{
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    align-items: $alignItem;
+    justify-content: $justifyContent;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    font-family: "Poppins" , sans-serif !important;
+}
+
+#root{
+    height: 100vh;
+    @include Flex(column , nowrap , center , center);
+    background: linear-gradient(to top , #4b6cb7 , #182848);
+    position: relative;
+}
+
+.header{
+    width: 100vw;
+    height: 50%;
+    @include Flex(row , nowrap , center , space-around);    
+
+    h1{
+        font-size: 45pt;
+        font-family: Abel !important;
+        background: linear-gradient(to right ,#38b8e7 ,  #0d87d8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: 1px;
+    }
+    div{
+        width: 30%;
+        height: 50%;
+        @include Flex(row,nowrap ,center ,center );
+        img{
+            object-fit: cover;
+            background: linear-gradient(to right ,#38b8e7 ,  #0d87d8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+.footer{
+    width: 100vw;
+    height: 50%;
+    @include Flex(column , nowrap , center , center);
+
+    p{
+        font-size: 50pt;
+        color: white;
+        font-family: Abel !important;
+        span{
+            color: #51c2d5 !important;
+            font-family: Abel !important;
+        }
+    }
+    h2{
+        margin-top: 5vh;
+    }
+}
+
+.hr{
+    border: solid rgb(4, 63, 139) 2px;
+    width: 80vw
+}
+
+@keyframes Load{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
