@@ -1,5 +1,4 @@
 import React from 'react';
-import Icon from '@mdi/react';
 import { mdiWeatherFog , mdiCloudOutline , mdiSnowflake , mdiUmbrellaOutline } from '@mdi/js';
 import ContextApi from '../Context';
 
